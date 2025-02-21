@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (var index = 0; index < 10; index++) {
+            console.log('print index', index);
+        }
+
+        for (var index = 10; index > 0; index--) {
+            console.log('print index', index);
+        }
+
+        function createTable() {
+            const num = document.getElementById('table').value;
+
+            for (index = 1; index < 11; index++) {
+                const tableValues = document.createElement('li');
+                tableValues.innerText = num + " * " + index + " = " + num * index;
+                document.getElementById('printTable').appendChild(tableValues);
+            }
+        }
+    </script>
+
+    <input type="text" id="table">
+    <button onclick="createTable()">create Table </button>
+    <ul id="printTable"></ul>
+</body>
+
+</html>

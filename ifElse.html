@@ -17,8 +17,19 @@
             } else {
                 document.getElementById('printValue').innerText = 'odd'
             }
+        }
 
-            // document.getElementById('printValue').innerText = checkValue % 2 === 0 ? 'even' : 'odd';
+        // document.getElementById('printValue').innerText = checkValue % 2 === 0 ? 'even' : 'odd';
+
+        function checkVal() {
+            const days = document.getElementById('enteredValue').value;
+            if (days == 'Mon') {
+                document.getElementById('printDays').innerText = 'Monday';
+            } else if (days == 'Tue') {
+                document.getElementById('printDays').innerText = 'Tuesday';
+            } else {
+                document.getElementById('printDays').innerText = 'Wrong Day!';
+            }
         }
     </script>
 
@@ -26,7 +37,12 @@
     <button onclick="checkNum()">Check Value</button>
     <h3>NO. Is : <strong id="printValue"></strong></h3>
 
-    <hr/>
+    <hr />
+
+    <input type="text" id="enteredValue" maxlength="3" placeholder="Days">
+    <button onclick="checkVal()">Days</button>
+    <h3><strong id="printDays"></strong></h3>
+
 </body>
 
 </html>

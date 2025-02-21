@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // difference between session and local is when close browser then session will clear but local is not clear
+
+        sessionStorage.setItem('name', 'Sayali');
+
+        const name = sessionStorage.getItem('name');
+        console.log("sessionStorage name", name);
+
+        const removedValue = sessionStorage.removeItem('name');
+        console.log("sessionStorage removeItem", removedValue);
+
+        sessionStorage.clear();
+        console.log("sessionStorage clear", sessionStorage.clear());
+
+
+        localStorage.setItem('name', 'Sayali');
+
+        const nameValue = localStorage.getItem('name');
+        console.log("localStorage name", nameValue);
+
+        localStorage.removeItem(nameValue);
+        localStorage.clear();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var employee = {
+            name: 'Sayali',
+            age: 25,
+            profession: 'Software Developer',
+            city: 'Sangli',
+            familyDetails: {
+                motherName: 'Nitarani',
+                occupation: 'housewife'
+            }
+        }
+
+        console.log('object access', employee)  //whole object access
+
+        console.log('object access name', employee.name)   //particular value access from object 
+
+        employee.age = 24;  //object value update - update object
+        console.log('object access age', employee.age)
+
+        employee.degree = 'B.Sc Computer Science' //new key and value add into object
+        console.log('object access', employee)
+
+        console.log('innerObject access', employee.familyDetails)
+        console.log('innerObject key-value access', employee.familyDetails['motherName'])
+
+        // ------------------------------------------------------
+        var student = {
+            name: 'Anuradha',
+            degree: 'M.Com',
+            city: 'Sangli',
+            subject: 'Account',
+            mobileNO: 7758994848
+        }
+
+        console.log("student object", student)
+        console.log("student object access another object value", student.profession)
+        console.log("student object value access dynamically", student['subject'])
+
+        // ------------------------------------------------------------
+
+
+    </script>
+</body>
+
+</html>

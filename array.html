@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var cityArray = ['Sangli', 'Kolhapur'];
+
+        var studentArray = [
+            { name: 'Sayali', city: 'Kolhapur', profession: 'Software Developer' },
+            { name: 'Anuradha', city: 'Pune', profession: 'Accountant' },
+            { name: 'Viraj', city: 'Islampur', profession: 'Student' }
+        ]
+        console.log('print array', studentArray);
+
+        console.log('print array value', cityArray[0]);
+
+        console.log('print array value', studentArray[0].city = 'Mumbai');
+        console.log('print array value', studentArray);
+
+        studentArray[7] = { name: 'Kajal', city: 'Solapur', profession: 'Scientist' }
+        console.log('print array value', studentArray);
+
+        cityArray.push('Mumbai');
+        console.log('print array - push', cityArray);
+
+        cityArray.unshift('Kolkata');
+        console.log('print array - unshift', cityArray);
+
+        cityArray.pop();
+        console.log('print array - pop', cityArray);
+
+        cityArray.shift();
+        console.log('print array - shift', cityArray);  
+
+
+    </script>
+</body>
+
+</html>
