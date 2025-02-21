@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="dynamicDiv"></div>
+    <button onclick="createContent()">Dynamic Content</button>
+
+    <p id="pId"></p>
+    <button onclick="pBtn()">PButton</button>
+
+    <script>
+        function createContent() {
+            const valuePass = document.createElement('p');
+            valuePass.innerHTML = 'New dynamic value';
+
+            document.getElementById('dynamicDiv').appendChild(valuePass)
+        }
+
+        function pBtn() {
+            const dynPValue = document.createElement('span');
+            dynPValue.innerHTML = 'p tag value';
+
+            document.getElementById('pId').appendChild(dynPValue)
+        }
+    </script>
+</body>
+
+</html>

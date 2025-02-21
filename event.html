@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- most used event - click, onChange-->
+    <button onClick="clickMe()">click</button>
+
+    <input type="text" oninput="inputValue()">
+    
+    <select name="" id="" onchange="dropdownValues()">
+        <option value="">Pune</option>
+        <option value="">Mumbai</option>
+        <option value="">Kolhapur</option>
+    </select>
+
+    <script>
+        function clickMe() {
+            alert('hi')
+        }
+
+        function inputValue() {
+            alert('input Alert')
+        }
+
+        function dropdownValues() {
+            alert('dropdown alert!')
+        }
+    </script>
+</body>
+
+</html>

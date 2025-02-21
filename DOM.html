@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function clickMe() {
+            alert("button click!");
+        }
+
+        function inputValue() {
+            const inputValue = document.getElementById('inputValue').value
+            alert(inputValue)
+        }
+
+        function copyValue() {
+            const inputValue = document.getElementById('inputValue1').value;
+            document.getElementById('copyValue').value = inputValue
+        }
+
+    </script>
+
+    <!-- value is show using id -->
+    <input id="inputValue" placeholder="input"></input>
+    <button onclick="inputValue()">Input Value</button>
+
+    <button onclick="clickMe()">click Me</button>
+
+    <hr />
+
+    <!-- set value using id -->
+    <input id="inputValue1" placeholder="input"></input>
+    <button onclick="copyValue()">Copy Value</button>
+    <input id="copyValue" placeholder="input"></input>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <!--dynamic css  -->
+    <p id="dynamicCss" onclick="dynamicCSS()" onmouseover="onMouseOverCSS()" onmouseleave="onMouseOverCSS()">Dynamic CSS
+    </p>
+
+    <script>
+        function dynamicCSS() {
+            document.getElementById('dynamicCss').style.color = 'red';
+        }
+
+        var isActive = true;
+        function onMouseOverCSS() {
+            document.getElementById('dynamicCss').style.color = isActive ? 'green' : 'black';
+            isActive = !isActive;
+        }
+    </script>
+
+    <!-- dynamic class -->
+    <script>
+        function redButton() {
+            document.getElementById('dynamicClass').classList.add('red')
+            document.getElementById('dynamicClass').classList.remove('green')
+        }
+
+        function greenButton() {
+            document.getElementById('dynamicClass').classList.add('green')
+            document.getElementById('dynamicClass').classList.remove('red')
+        }
+    </script>
+
+    <div id="dynamicClass" style="height: 50px; width: 50px;"></div>
+    <button onclick="redButton()">Red Button</button>
+    <button onclick="greenButton()">Green Button</button>
+
+    <style>
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</body>
+
+</html>

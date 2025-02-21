@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // normal function
+        function showMessage() {
+            console.log('this is function!')
+        }
+        // function execution/call/invoke
+        showMessage();
+
+        function sum() {
+            const num1 = 10;
+            const num2 = 20;
+            const sum = num1 + num2;
+            console.log("sum", sum);
+        }
+        sum();
+
+        // function with parameters
+        function withParameters(num1 = 0, num2 = 0) {
+            const sumOfParameters = num1 + num2;
+            console.log("sumOfParameters", sumOfParameters);
+
+        }
+
+        withParameters(10, 60);
+        withParameters(10);
+        withParameters();
+
+        // function return value
+        function returnValueFun(num1 = 0, num2 = 0) {
+            const result = num1 + num2;
+            return result;
+        }
+
+        let finalResult = returnValueFun(10, 20);
+        console.log('finalResult', finalResult);
+
+    </script>
+</body>
+
+</html>

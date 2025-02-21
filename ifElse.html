@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkNum() {
+            const checkValue = document.getElementById('enteredInput').value;
+
+            if (checkValue % 2 === 0) {
+                document.getElementById('printValue').innerText = 'even'
+            } else {
+                document.getElementById('printValue').innerText = 'odd'
+            }
+
+            // document.getElementById('printValue').innerText = checkValue % 2 === 0 ? 'even' : 'odd';
+        }
+    </script>
+
+    <input type="text" id="enteredInput" placeholder="value">
+    <button onclick="checkNum()">Check Value</button>
+    <h3>NO. Is : <strong id="printValue"></strong></h3>
+
+    <hr/>
+</body>
+
+</html>
