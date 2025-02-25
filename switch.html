@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getValue() {
+            let getDay = +(document.getElementById('switchValue').value);
+
+            debugger
+            switch (getDay) {
+                case 1:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Sunday";
+                    break;
+                case 2:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Monday";
+                    break;
+                case 3:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Tuesday";
+                    break;
+                case 4:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Wednesday";
+                    break;
+                case 5:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Thursday";
+                    break;
+                case 6:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Friday";
+                    break;
+                case 7:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "Saturday";
+                    break;
+                default:
+                    document.getElementById('printStatement').innerText = document.getElementById('switchValue').value + "," + "is not correct input for the getting day";
+            }
+        }
+    </script>
+
+    <input type="text" id="switchValue">
+    <button onclick="getValue()">Enter number for get WeeKDay</button>
+    <p id="printStatement"></p>
+</body>
+
+</html>

@@ -31,6 +31,16 @@
                 document.getElementById('printDays').innerText = 'Wrong Day!';
             }
         }
+
+        function getAge() {
+            let givenAge = document.getElementById('enteredAge').value;
+            let votingAge = 18
+            if (votingAge < givenAge) {
+                document.getElementById('printMsg').innerText = document.getElementById('enteredAge').value + ", " + "age is correct for the voting."
+            } else {
+                document.getElementById('printMsg').innerText = document.getElementById('enteredAge').value + ", " + "age is not-correct for the voting."
+            }
+        }
     </script>
 
     <input type="text" id="enteredInput" placeholder="value">
@@ -42,6 +52,12 @@
     <input type="text" id="enteredValue" maxlength="3" placeholder="Days">
     <button onclick="checkVal()">Days</button>
     <h3><strong id="printDays"></strong></h3>
+
+    <hr />
+
+    <input type="text" id="enteredAge" maxlength="3" placeholder="Age">
+    <button onclick="getAge()">Age</button>
+    <h3><strong id="printMsg"></strong></h3>
 
 </body>
 
