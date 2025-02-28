@@ -54,8 +54,42 @@
         var checkNameCityValues = name == name1 ? 'both are the same value' : 'both are different value';
         console.log('checkNameCityValues', checkNameCityValues)
 
+        let digit = 1;
 
+        // --, ++ digit , first increase value by 1
+        ++digit;
+        console.log("++digit", digit);
 
+        --digit;
+        console.log("--digit", digit);
+
+        // digit --, ++  , first print original value and then increase value by 1
+        digit++;
+        console.log("digit++", digit);
+
+        digit--;
+        console.log("digit--", digit);
+
+        // assignment 
+
+        let numA = 10;
+        let numB = 20;
+
+        numA += 9;
+        //numA = numA + 9
+        console.log('num', numA) //19
+        numA -= 9;
+        console.log('num', numA) //1
+        numA *= 9;
+        console.log('num', numA) //90
+        numA /= 9;
+        console.log('num', numA) //1.
+        numA %= 9;
+        console.log('num', numA) //1.
+        numA **= 2;
+        console.log('num', numA) //40
+
+        console.log("number check", numA !== numB)
     </script>
 </body>
 
