@@ -27,18 +27,47 @@
         console.log('print array value', studentArray);
 
         cityArray.push('Mumbai');
-        console.log('print array - push', cityArray);
+        console.log('print array - push', cityArray); //change original array - add element at the end
 
         cityArray.unshift('Kolkata');
         console.log('print array - unshift', cityArray);
 
         cityArray.pop();
-        console.log('print array - pop', cityArray);
+        console.log('print array - pop', cityArray); //change original array - remove element from the end
 
         cityArray.shift();
-        console.log('print array - shift', cityArray);  
+        console.log('print array - shift', cityArray);
 
+        console.log('print array - string convert', cityArray.toString()); //convert array to string
 
+        let villageArray = ['Nagthane', 'walwa'];
+        console.log('concat', cityArray.concat(villageArray)) //concat two arrays.
+
+        let newArray = ['apple', 'banana', 'carrot', 'dates', 'egg'];
+        console.log('slice', newArray.slice(1, 5)) // cut given index number values and not change in original array.
+
+        let arrSp = [1, 2, 3, 4, 5, 6, 7];
+        //splice change to original array in way add, remove, replace
+        arrSp.splice(1, 0, 55);
+        console.log('arrSp', arrSp); //Add
+
+        arrSp.splice(3, 1);
+        console.log('arrSp', arrSp); //delete
+
+        arrSp.splice(1, 1, 88);
+        console.log('arrSp', arrSp); //replace
+
+        let companies = ['Bloomberg', "Google", "Facebook", "Amazon", "Microsoft"];
+        console.log('companies', companies);
+
+        companies.shift();
+        console.log('companies', companies);
+
+        companies.splice(1, 1, 'Ola')
+        console.log('companies', companies);
+
+        companies.push('IBM');
+        console.log('companies', companies);
     </script>
 </body>
 
