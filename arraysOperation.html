@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // array is a collection of the similar type of data. representation in linear form
+        // array with property and operations
+
+        let createArray = ['Sayali', 'Anu', 'Viraj'];
+        console.log('createArray', createArray);
+
+        // for the access value from array use index 
+        console.log('values', createArray[2])
+
+        // update value in array 
+        createArray[2] = 'Viru';
+        console.log('createArray', createArray)
+
+        // new value add in array 
+        createArray[3] = 'Rajveer';
+        console.log('createArray', createArray)
+
+        // print all values in array.
+        for (i = 0; i < createArray.length; i++) {
+            console.log('createArray', createArray[i])
+        }
+
+        for (let val of createArray) {
+            console.log('createArray forOf', val)
+        }
+
+        // average marks calculation
+
+        let sum = 0;
+        let marksList = [85, 97, 44, 37, 76, 60];
+        for (let val of marksList) {
+            sum += val;
+        }
+        console.log(sum, "sum")
+        let avg = sum / marksList.length;
+        console.log(avg, "avg") // 65.5
+
+        
+
+    </script>
+</body>
+
+</html>

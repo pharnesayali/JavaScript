@@ -11,6 +11,10 @@
 <body>
     <script>
         // 'variable declaration, initialize, update, access'
+        // var is function scope, declare, update and redeclare possible.
+        // let is block scope, declare, update.redeclare not possible. after variable declare value is not initialize, then it not give error.
+        // const is block scope, declare. update and redeclare not possible. after variable declare value is not initialize, then it give error.
+
         var num = 10;
 
         let name = 'Viraj';
@@ -20,6 +24,8 @@
         console.log('name', name);
 
         alert('Hi!', name);
+        let valueGet = prompt('Hi!');
+        console.log('valueGet', valueGet);
 
         name = 'Sayali';
         console.log('name', name);

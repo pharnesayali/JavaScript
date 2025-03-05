@@ -26,6 +26,62 @@
                 document.getElementById('printTable').appendChild(tableValues);
             }
         }
+
+        // while loop
+        let j = 1;
+        while (j <= 10) {
+            console.log('print j', j);
+            j++;
+        }
+
+        // do while loop
+        // it give once output even condition is false
+        let k = 20;
+        do {
+            console.log('print k');
+            k++;
+        } while (k <= 10);
+
+        // for of loop -  this loop is use for the get string values and length.
+        let str = "FullStack Developer";
+        let strLength = 0;
+        for (let val of str) {
+            console.log('str val = ', val);
+            strLength++;
+        }
+        console.log('str val = ', strLength);
+
+        // for in loop - this loop is use for the get object values and length.
+        let studentInfo = {
+            name: 'Sayali',
+            age: 25
+        }
+        for (let key in studentInfo) {
+            console.log('key', key, 'value', studentInfo[key]);
+        }
+
+        // print even numbers between 0 to 100
+        for (i = 0; i <= 100; i++) {
+            // console.log('i', i)
+            if (i % 2 === 0)
+                console.log('Even numbers between 0 to 100', i);
+        }
+
+        // game question
+        let gameNumber = 25;
+        let enteredNumber = prompt('Enter the number');
+        // if (gameNumber === +(enteredNumber)) {
+        //     console.log("You won the game");
+        // } else {
+        //     console.log("Entered number is not correct number as per game, Please try again");
+        //     enteredNumber = null;
+        // }
+
+        while (gameNumber != enteredNumber) {
+            enteredNumber = prompt('Entered number is not correct number as per game, Please try again');
+        }
+        console.log("You won the game");
+
     </script>
 
     <input type="text" id="table">

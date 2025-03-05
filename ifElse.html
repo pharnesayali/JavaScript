@@ -41,6 +41,24 @@
                 document.getElementById('printMsg').innerText = document.getElementById('enteredAge').value + ", " + "age is not-correct for the voting."
             }
         }
+
+        let valEntered = prompt('Enter the Score');
+        let grade;
+
+        if (valEntered >= 90 && valEntered <= 100) {
+            grade = 'A';
+        } else if (valEntered >= 70 && valEntered <= 89) {
+            grade = 'B';
+        } else if (valEntered >= 60 && valEntered <= 69) {
+            grade = 'C';
+        } else if (valEntered >= 50 && valEntered <= 59) {
+            grade = 'D';
+        } else if (valEntered >= 0 && valEntered <= 49) {
+            grade = 'F';
+        }
+
+        console.log('As per your percentage your grade is :', grade);
+
     </script>
 
     <input type="text" id="enteredInput" placeholder="value">
@@ -58,6 +76,7 @@
     <input type="text" id="enteredAge" maxlength="3" placeholder="Age">
     <button onclick="getAge()">Age</button>
     <h3><strong id="printMsg"></strong></h3>
+
 
 </body>
 
