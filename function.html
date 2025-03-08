@@ -10,12 +10,15 @@
 <body>
     <script>
 
+        // Function - block of code that perform specific task, can be invoked when needed.
+        // repeat line of code can be written in function and can be called when needed.
+
         // normal function
         function showMessage() {
             console.log('this is function!')
-        }
-        // function execution/call/invoke
-        showMessage();
+        } // function declaration/definition
+
+        showMessage();  // function execution/call/invoke
 
         function sum() {
             const num1 = 10;
@@ -26,13 +29,14 @@
         sum();
 
         // function with parameters
-        function withParameters(num1 = 0, num2 = 0) {
+        // parameters values are local variable of function, it have block scope i.e. - only use in specific function.
+        function withParameters(num1 = 0, num2 = 0) {  //input values - parameters
             const sumOfParameters = num1 + num2;
             console.log("sumOfParameters", sumOfParameters);
 
         }
 
-        withParameters(10, 60);
+        withParameters(10, 60); //value pass - argument
         withParameters(10);
         withParameters();
 
@@ -44,6 +48,141 @@
 
         let finalResult = returnValueFun(10, 20);
         console.log('finalResult', finalResult);
+
+        // arrow function - compact way to write function
+
+        let mul = (a, b) => { console.log(a * b, "value of multiplication") };
+        mul(10, 89);
+
+
+        // return vowels form the string
+        let count = 0;
+        function findVowels(str) {
+            for (let val of str) {
+                if (val === 'a' || val === 'e' || val === 'i' || val === 'o' || val === 'u') {
+                    count++
+                    console.log(val, count);
+                }
+            }
+        }
+
+        findVowels('Rupesh');
+
+        // arrow function for the above task
+        const countVowels = (str) => {
+            let count = 0;
+            for (let val of str) {
+                if (val === 'a' || val === 'e' || val === 'i' || val === 'o' || val === 'u') {
+                    count++
+                    console.log(val, count);
+                }
+            }
+        }
+        countVowels('Sayali');
+
+        // call back function
+        // A function use as parameter in another function is called callback function./ a callback function passed as an argument to another function.
+        // callback function returns function value.
+        function printString() {
+            console.log('callback function');
+        }
+
+        function fetchData(callback) {
+            return callback();
+        }
+
+        fetchData(printString);
+
+        // foreach
+        // foreach is only work on array. it iterate on each element of array.
+        // it having - parameter include value of array[val], index of element[index], array itself[arr]
+        // higher order function or higher order methods - include foreach method/function.
+        let arr = ['Sayali', 'Anu', 'Viraj']
+        let custFun = arr.forEach((val, index, arr) => {
+            console.log('val', val, index, arr)
+        })
+
+        // find square of given array
+        let sampleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        sampleArray.forEach((val) => {
+            let squareNumbers = val * val;
+            console.log(val + " = " + squareNumbers);
+        }) //way -1
+
+        function findSquare(val) {
+            let squareNumbers = val * val;
+            console.log(val + " = " + squareNumbers);
+        }
+
+        sampleArray.forEach(findSquare); //way -2
+
+        // Map
+        // map is used to create a new array.
+        // it iterate on each element of array and return new array.
+
+        let mapArray = [5, 6, 8];
+        let mapResult = mapArray.map((val) => {
+            return val * val;
+        });
+
+        console.log('mapResult_Square', mapResult, 'originalArray', mapArray);
+
+        // filter
+        // filter is used to filter out the element from array according to condition.
+        // it iterate on each element of array and return value.
+        // it return op in form of single value or in new array format.
+
+        let basicArr = [90.67, 45, 78, 90, 89, 67];
+
+        let filteredArray = basicArr.filter((val) => {
+            // return val > 70;
+            return val % 2 === 0;
+            // return val % 2 !== 0;
+        })
+
+        console.log('filteredArray', filteredArray, "originalArr", basicArr);
+
+        // reduce
+        // reduce is used for perform operation and reduce the array into single values. It returns single value.
+
+        let givenArray = [78, 56, 345, 12, 57];
+        const maxNoFromArray = givenArray.reduce((prev, curr) => {
+            return prev < curr ? prev : curr;
+            // return prev + curr;
+        })
+        console.log('maxNoFromArray', maxNoFromArray);
+
+        // eg for get number greater than 90 from array
+        let marksArray = [90, 99, 97, 76, 56];
+        let filterArr = marksArray.filter((val) => {
+            return val > 90;
+        })
+        console.log('filterArr', filterArr);
+
+        // eg
+
+        let enteredValue = prompt('Enter your number');
+
+        let newArr = []
+        for (let i = 1; i <= enteredValue; i++) {
+            newArr[i - 1] = i;
+        }
+
+        console.log('newArr', newArr);
+
+        let sumArr = newArr.reduce((prev, curr) => {
+            return prev + curr;
+        })
+
+        console.log('sumArr', sumArr)
+
+        let factorial = newArr.reduce((prev, curr) => {
+            return prev * curr;
+        })
+
+        console.log('factorial', factorial)
+
 
     </script>
 </body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ttr {
+            color: white;
+            height: 70px;
+            width: 200px;
+            background-color: burlywood;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">first div</div>
+    <div class="box">Second div</div>
+    <div class="box">Third div</div>
+
+    <!-- get attribute -->
+    <div class="att" id="ttr">attribute get</div>
+
+    <script>
+        let divs = document.querySelectorAll('.box');
+        console.log(divs)
+        console.log(divs[0].innerText = 'Sayali')
+        console.log(divs[1].innerHTML = 'Anuradha')
+        console.log(divs[2].innerHTML = 'Viraj')
+
+        // get attribute value - getAttribute('class')
+
+        let attPrint = document.querySelector('#ttr');
+        console.log(attPrint)
+        console.log(attPrint.getAttribute('id'));
+
+        // set attribute value - setAttribute('class, id', 'attributeSet')
+        attPrint.setAttribute('id', 'attributeSet');
+
+        // for access style
+
+        // let cssChanges = div.style
+        // console.log(cssChanges)
+
+        document.querySelector('.att').style.backgroundColor = 'red';
+
+        // 
+
+
+    </script>
+</body>
+
+</html>

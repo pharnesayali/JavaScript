@@ -5,27 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="global.css">
+
 </head>
 
 <body>
 
-    <script>
+    <!-- when a web page loaded, the browser crates a Document Object Model of the page.  -->
+    <!-- Dom having a tree like structure. -->
+    <!-- window  => document => html => head and body => head - meta, link, title => body => div, script. === tree structure of the dom -->
 
-        function clickMe() {
-            alert("button click!");
-        }
+    <h1 id="heading">Heading</h1> <!-- id is used to access the element -->
 
-        function inputValue() {
-            const inputValue = document.getElementById('inputValue').value
-            alert(inputValue)
-        }
+    <p class="paragraphCss">This is para first.</p> <!-- class is used to apply css -->
+    <p class="paragraphCss">This is para second.</p>
 
-        function copyValue() {
-            const inputValue = document.getElementById('inputValue1').value;
-            document.getElementById('copyValue').value = inputValue
-        }
+    <button>button 1</button>
+    <button>button 2</button>
 
-    </script>
+    <hr />
 
     <!-- value is show using id -->
     <input id="inputValue" placeholder="input"></input>
@@ -40,6 +38,33 @@
     <button onclick="copyValue()">Copy Value</button>
     <input id="copyValue" placeholder="input"></input>
 
+    <script src="index.js"></script>
+
+    <div>
+        <h4>Fruits list</h4>
+        <h3 style="visibility: hidden;">Fruits list</h3>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Dragon</li>
+        </ul>
+    </div>
+
+    <!-- // tagName - return tag for element nodes.
+// innerText - return text content of element and all its children.
+// innerHTML - return text content of element and all its children with HTML tags.
+// textContent - return text content of element even it's hidden. -->
+
+    <p id="para-01">
+        <span>First span</span>
+    </p>
+
+    <h2 id="idd">Hello Java Script!</h2>
+
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
 </body>
 
 </html>
