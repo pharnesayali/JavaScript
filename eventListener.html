@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="clickClass">Click me</button>
+
+    <script>
+        // ✔ When you need multiple event handlers on an element.
+        // ✔ When dynamically adding/removing events.
+        // ✔ When handling events on elements added later (event delegation).
+        //  node.addEventListener(event, callback) 
+
+        let buttonAccess = document.querySelector('button');
+        console.log('buttonAccess', buttonAccess)
+
+        buttonAccess.addEventListener('click', () => {
+            console.log('Button clicked1')
+        })
+        let btn2 = buttonAccess.addEventListener('click', () => {
+            console.log('Button clicked2')
+        })
+
+        // element.addEventListener(event, function);
+        // element → The HTML element to which the event is attached.
+        // event → The name of the event (e.g., "click", "mouseover", "keydown").
+        // function → The function that runs when the event occurs.
+
+
+        // node.removeEventListener(event, callback)
+        //  the callback reference should be same to remove
+        buttonAccess.removeEventListener('click', btn2);
+
+        // que
+
+        let accessListener = document.querySelector('.clickClass');
+        console.log('accessListener', accessListener)
+        let mode = 'light';
+
+        accessListener.addEventListener('click', () => {
+            if (mode === 'light') {
+                mode = 'dark';
+                document.querySelector('body').style.backgroundColor = 'black';
+            } else {
+                document.querySelector('body').style.backgroundColor = 'white';
+                mode = 'light';
+            }
+        })
+    </script>
+
+</body>
+
+</html>

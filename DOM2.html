@@ -13,6 +13,23 @@
             background-color: burlywood;
             text-align: center;
         }
+
+        .pTag {
+            height: 100px;
+            background-color: bisque;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .para {
+            color: red;
+        }
+
+        .newPara {
+            background-color: blanchedalmond;
+        }
     </style>
 </head>
 
@@ -24,7 +41,12 @@
     <!-- get attribute -->
     <div class="att" id="ttr">attribute get</div>
 
+    <p class="pTag">Normal P tag.</p>
+
+    <p class="para">I am paragraph.</p>
+
     <script>
+        // que I
         let divs = document.querySelectorAll('.box');
         console.log(divs)
         console.log(divs[0].innerText = 'Sayali')
@@ -47,8 +69,49 @@
 
         document.querySelector('.att').style.backgroundColor = 'red';
 
-        // 
+        // add element in dom
 
+        // node.append(el) - add element at the end of the node.
+        // node.prepend(el) - add element at the beginning of the node.
+        // node.before(el) - add element before the node.
+        // node.after(el) - add element after the node.
+
+        let newTag = document.createElement('p');
+        newTag.innerText = 'Sayali';
+        console.log('newTag', newTag);
+
+        let appendNewTag = document.querySelector('p');
+        console.log('appendNewTag', appendNewTag)
+
+        appendNewTag.append(newTag)
+        appendNewTag.prepend(newTag)
+        appendNewTag.before(newTag)
+        appendNewTag.after(newTag)
+
+        // delete element in dom
+
+        // node.remove(el)
+
+        let removeDiv = document.querySelector('.att')
+        console.log('removeDiv', removeDiv)
+        removeDiv.remove()
+
+        // q1
+
+        let createElement = document.createElement('button');
+        createElement.innerText = 'Click Me!'
+        createElement.style.backgroundColor = 'red';
+        createElement.style.color = 'white';
+
+        document.querySelector('body').prepend(createElement);
+
+        // q2
+
+        let accessPara = document.querySelector('.para');
+        console.log('accessPara', accessPara)
+
+        accessPara.classList.add('newPara');
+        console.log(accessPara.getAttribute('class'))
 
     </script>
 </body>
