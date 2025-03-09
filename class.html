@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Class is a program-code template for creating objects -->
+    <!-- Those objects will have some state (variables) & some behavior (functions) inside it. -->
+    <!-- constructor is a special type of the function. js automatically invoked when page is load. it is used for the assigning the values and calling methods. -->
+
+    <script>
+        // example
+        class MyClass {
+            constructor() { }
+            myMethod() { }
+        }
+        let myObj = new MyClass();
+
+        // Practice example
+
+        class NewClass {
+            constructor(mileage) {
+                console.log('this is constructor.');
+                this.mileage = mileage;
+            }
+
+            student() {
+                console.log('Basic details');
+            }
+
+            customDetails(details) {
+                this.details = details;
+
+            }
+        }
+
+        let studentInfo = new NewClass(10);
+        console.log("studentInfo", studentInfo);
+        studentInfo.customDetails("custom information")
+
+
+    </script>
+</body>
+
+</html>

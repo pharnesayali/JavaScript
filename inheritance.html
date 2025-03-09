@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- inheritance means the property and method extend into child class. or simply we say that using passing down methods or properties from parent to child -->
+
+    <!-- this helps to maintain code and reusability -->
+
+    <!-- when ever in parent and child having a same name method or function then it over-ride, and child's method work which is same name of the parent. -->
+
+    <!-- *If Child & Parent have same method, child’s method will be used. -->
+
+    <script>
+        class person {
+            constructor() { console.log("this is constructor"); }
+
+            normalPerson() {
+                console.log('living happily.');
+            }
+
+            work() {
+                console.log('do nothing.');
+            }
+        }
+
+        class Engineer extends person {
+            work() {
+                console.log('it build new solution which is useful for the all.');
+            }
+        }
+
+        let newEngineer = new Engineer();
+
+    </script>
+</body>
+
+</html>

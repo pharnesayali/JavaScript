@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <!--  -->
+    <!-- A javaScript object is an entity having state and behavior (properties and methods) -->
+    <!-- JS objects have a special property called prototype -->
+    <!-- We can set prototype using _ _ proto _ _ -->
+    <!-- *If object & prototype have same method, object’s method will be used. -->
+
+    <script>
+        // simple way for create object
+        let information = {
+            name: 'Sayali',
+            age: 25,
+            sum: function () { console.log('age', this.age) }
+        }
+
+        // example of prototype
+        let details = {
+            salary() {
+                console.log('My salary is 7LPA/annum.')
+            }
+        }
+
+        let employee = {
+            name: 'Sayali',
+            Salary: 60000
+        }
+
+        employee.__proto__ = details;   // reuse of the function. assign prototype to object using another function __proto__.
+
+
+        // if having a same method inside object and prototype, then it use method of the respective object.
+        let student = {
+            percentage() {
+                console.log('My percentage is 80%');
+            }
+        }
+
+        let rankedStud = {
+            name: 'Sayali',
+            percentage: 95,
+            percentage() {
+                console.log('My percentage is 90%');
+            }
+        }
+
+        rankedStud.__Proto__ = student;
+
+
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+
+        class Person {
+            constructor(name) {
+                console.log('this is parent constructor');
+                this.name = name;
+            }
+
+            normalPerson(name) {
+                console.log('just eat!' + name)
+            }
+        }
+
+        class Engineer extends Person {
+            constructor(name) {
+                console.log('this is child constructor')
+                super(name); // super pass this name to the parent constructor.
+            }
+            work() {
+                super.normalPerson('sayali');   //using of super.method name we can access parent function
+                console.log('found new')
+            }
+        }
+
+        let newEng = new Engineer('Sayali');
+
+        // practice question
+        // You are creating a website for your college. Create a class User with 2 properties, name & email. It also has a method called viewData( ) that allows user to view website data.
+
+        let Data = 'Website data'
+        class User {
+            constructor(name, email) {
+                console.log("accessedData", name, email);
+                this.name = name;
+                this.email = email;
+            }
+
+            viewData() {
+                console.log('viewData', Data)
+            }
+        }
+
+        class Admin extends User {
+            constructor() {
+                super('admin', 'admin@gmail.com');
+            }
+
+            editData() {
+                Data = "Admin can edit data of website"
+            }
+        }
+
+        this.stud1 = new User('sayali', 'sayali.pharne@bluebenz.com');
+
+        this.admin = new Admin();
+
+    </script>
+</body>
+
+</html>

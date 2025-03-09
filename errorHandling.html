@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // try and catch are used in programming for the avoid error. try check the code where we think errors will come that code write under the try block and in the catch function we pass argument/parameter name error which is generated from the code having error that error we can track in the catch block.
+
+        // if we not use try and catch then code give error also it not run for the next line of the line which gives error.
+
+        // using of the try and catch it only catch the error generated from the code error and it not affected on the remain code of the programming, error can track or print in console.
+        // try-catch Syntax
+        try {
+            // ... normal code
+        } catch (err) { //err is error object
+            // ... handling error
+        }
+
+
+        let a = 10;
+        let b = 30;
+
+        console.log('sum', a + b)
+        try {
+            console.log('sum', a - c)
+        } catch (err) {
+            console.log('error', err)
+        }
+        console.log('sum', a * b)
+
+    </script>
+</body>
+
+</html>
