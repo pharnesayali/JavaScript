@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // IIEF function is used for the invoke function immediately
+        // IIFE is a function that is called immediately as soon as it is defined
+
+        function sum(a, b) {
+            return new Promise(() => {
+                let sum = a + b;
+                console.log('sum', sum)
+            })
+        }
+
+        (async function () {
+            sum(30, 80)
+            sum(30, 80) 
+        })();
+
+    </script>
+</body>
+
+</html>
