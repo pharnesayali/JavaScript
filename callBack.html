@@ -111,6 +111,75 @@
 
         getInfo('123');
 
+        // after promise complete means it give res - resolve or reject.
+        // then and catch is used for the further process after resolve and reject
+        // successful, resolve response get after that use 'then' for the further process means function call, console, etc.
+        // reject response get after that use 'catch' for the further process means showing respective error.
+        // promise.then(()=>{...})
+        // promise.catch(()=>{...})
+
+        let newPromise = getInfo(555);
+
+        newPromise.then((res) => {
+            console.log('success of promise', res)
+        })
+
+        newPromise.catch((err) => {
+            console.log('error found', err)
+        })
+
+        // perform add using promise
+
+        function getNum(a, b) {
+            return new Promise((resolve, reject) => {
+                // console.log(a, b)
+                resolve({ a, b });
+            })
+        }
+
+        let newPromises = getNum(10, 20)
+
+        newPromises.then((res) => {
+            console.log('res', res)
+            let sum = res.a + res.b;
+            console.log('sum', sum)
+        })
+
+        // promise chaining
+
+        function readData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('success!!!!!');
+                    resolve('success data!!!!')
+                }, 6000)
+            })
+        }
+
+        let newFuns = readData()
+
+        // newFuns.then((res) => {
+        //     console.log('data printing 1')
+        //     console.log('res', res)
+        //     console.log('data printing 2')
+        //     newFuns.then((res) => {
+        //         console.log('res', res)
+        //     })
+        // })
+
+        readData().then((res) => {
+            return readData()
+        })
+            .then((res) => {
+                return readData()
+            })
+            .then(() => {
+                console.log('all done regarding of the promise chaining.')
+            });
+
+
+
+
 
     </script>
 </body>
