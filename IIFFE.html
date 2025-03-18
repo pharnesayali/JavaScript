@@ -21,8 +21,16 @@
 
         (async function () {
             sum(30, 80)
-            sum(30, 80) 
-        })();
+            sum(30, 90)
+        })(); //method 1
+
+
+        (function () {
+            let a = 10;
+            let b = 60;
+            const sum = a + b;
+            console.log('sum1', sum)
+        })(); //method 2
 
     </script>
 </body>
