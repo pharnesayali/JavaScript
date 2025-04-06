@@ -120,6 +120,7 @@
         // Map
         // map is used to create a new array.
         // it iterate on each element of array and return new array.
+        // if map used in condition based arrays then it return array of true/false values.
 
         let mapArray = [5, 6, 8];
         let mapResult = mapArray.map((val) => {
@@ -182,6 +183,17 @@
         })
 
         console.log('factorial', factorial)
+
+
+        function multiplier(factor) {
+            debugger
+            return function (number) {
+                return number * factor;
+            };
+        }
+
+        let double = multiplier(2);  // Returns a function that multiplies by 2
+        console.log('Sayali', double(5));
 
 
     </script>
