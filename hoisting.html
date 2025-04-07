@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+
+<body>
+    <!-- hoisting - means variable or function access before its initialization.-->
+    <!-- In variable declaration case var declare with var and tried access before var declaration at top then it will give error as undefined  -->
+    <!-- In case function, function can access before declaration then it can not give error successfully function execution occur. -->
+    <script>
+        // 1. Variable Hoisting
+        console.log(accessValue); //undefined
+        var accessValue = 'Sayali';
+        console.log(accessValue); //Sayali
+
+        // 2. Function Hoisting
+        printVal()
+
+        function printVal() {
+            console.log('This is hoisting function example.')
+        }
+
+        // 3. let and const Hoisting - not support
+        // console.log(hoistingLetValueAccess); // op/ReferenceError - Cannot access 'hoistingLetValueAccess' before initialization
+        // let hoistingLetValueAccess = 'Anu';
+
+        // console.log(hoistingConstValueAccess); // op/ReferenceError - Cannot access 'hoistingConstValueAccess' before initialization
+        // let hoistingConstValueAccess = 12;
+
+        // 4.function stored in variable hoisting
+        console.log(funHoisting);
+
+        var funHoisting = function () {
+            console.log('This is hoisting example - function stored in variable.')
+        }
+
+
+    </script>
+</body>
+
+</html>
