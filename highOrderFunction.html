@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High order function</title>
+</head>
+
+<body>
+    <script>
+        // <!-- High order function - function take as parameter to another function or return value as function -->
+
+        // 1
+        setTimeout(function () {   // function as parameter
+            console.log('Hi')
+        }, 2000)
+
+        // 2
+        function multiply(factor) {   //function return function as a result
+            return function (number) {
+                return number * factor;
+            }
+        }
+
+        let double = multiply(3); //function return value as function
+        console.log(double(5)); //10
+
+        // 3
+        // built in HOF - map, filter, reduce
+
+        // map - create new array from existing array
+        let numberList = [1, 2, 3, 4, 5];
+        let squaredList = numberList.map(num => num * num);
+        console.log(numberList, squaredList);
+
+        // filter - create new array from existing array based on condition
+        let originalArray = [15, 90, 78, 56, 34];
+        let filteredArray = originalArray.filter(num => num > 50);
+        console.log(originalArray, filteredArray);
+
+        // reduce - retrieve single value from array
+        let mark = [20, 99, 90, 90];
+        let total = mark.reduce((curr, prev) => curr + prev, 0);
+        console.log(mark, total);
+
+        // sort - sort array based on condition
+        let students = [
+            { name: "Alice", score: 85 },
+            { name: "Bob", score: 95 },
+            { name: "Charlie", score: 78 }
+        ];
+
+        students.sort((a, b) => b.score - a.score);
+        console.log(students);
+        
+    </script>
+</body>
+
+</html>

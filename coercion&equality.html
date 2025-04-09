@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coercion&equality</title>
+</head>
+
+<body>
+    <script>
+        // coercion - implicit data type conversion or java script convert data type one to another called coercion.
+        let x = 10;
+        console.log(x + '')
+
+        let y = 'Sayu'
+        console.log(Number(y)) //NaN
+
+        let z = '2000 Sayali';
+        console.log(parseInt(z));
+
+        let a = '10';
+        console.log(+(a));
+
+        console.log(!a);
+
+        // for the function, array and all numbers apply ! then it give true as return value.
+
+        // for the 0, ! return false.
+
+        // equality -  == - loose equality operator, === - strict equality operator.
+        // == - check only value, === - check value and data type.
+
+        let b = 10;
+        let c = '10';
+        console.log(b == c); // true
+        console.log(b === c); // false
+
+        let d = 0;
+        let e = false;
+        console.log(d == e); // true
+        console.log(d === e); // false
+
+        let f = null;
+        let g = undefined;
+        console.log(f == g); // true
+        console.log(f === g); // false
+
+
+    </script>
+</body>
+
+</html>

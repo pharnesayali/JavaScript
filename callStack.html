@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callStack</title>
+</head>
+
+<body>
+    <!-- javaScript execution context means javascript runs to code-->
+
+    <!-- 1. Global execution context-->
+    <!-- 2. Functional execution context-->
+    <!-- 3. Eval execution context / global-->
+
+    <script>
+        function one() {
+            console.log('one')
+            this.two()
+        }
+
+        function two() {
+            console.log('two')
+            this.three()
+        }
+
+        function three() {
+            console.log('three')
+        }
+
+        one()
+        two()
+        three()
+    </script>
+</body>
+
+</html>

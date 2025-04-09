@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // this keyword in JavaScript refers to the object from which it was called.
+        // The value of this depends on the context in which it is called.
+        // In the global context, this refers to the global object (window in browsers).
+        
+        // 1.
+        const details = {
+            name: 'John',
+            age: 30,
+            greet: function () {
+                console.log(this.name);
+                console.log(this);
+            }
+        };
+
+        details.greet();
+        console.log(this); // {}
+
+        // 2.
+        function sample() {
+            let name = 'sayali';
+            console.log(this.name) // undefined
+            console.log(this)
+        }
+        sample()
+
+        // 3.
+        const data = function sample() {
+            let name = 'sayali';
+            console.log(this.name) // undefined
+            console.log(this)
+        }
+
+        data();
+
+        // 4. 
+
+        let arrowFun = () => {
+            console.log('arrow fun')
+            console.log(this)
+        }
+
+        arrowFun();
+
+        let sum = (a, b)=>{
+            return a + b;
+        }
+
+        console.log(sum(10, 30))
+
+        let multiply = (a,b)=>(a * b);
+        console.log(multiply(10, 30))
+
+        let storeObj =()=>({name:'Saya'})
+        console.log(storeObj())
+
+    </script>
+
+</body>
+
+</html>

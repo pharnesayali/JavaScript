@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+
+<body>
+    <!-- closures - inside the outer function having another one more function which have access of outer function variables called closures. -->
+
+    <script>
+        // 1
+        function outer() {
+            let value = 'sayali';
+
+            function inner() {
+                console.log('access outer function variable: ' + value)
+            }
+
+            inner();
+        }
+
+        outer();
+
+        // 2
+        let age = 25;
+        function outerFun() {
+            let value = 'sayali';
+            console.log(age, 'age')
+
+            function inner() {
+
+                console.log('access outer function variable: ' + value)
+            }
+
+            inner();
+        }
+
+        outerFun();
+
+        // 3
+
+        function outerTest() {
+            let value = 'sayali';
+
+            function inner() {
+                let newVal = 'xxx'
+                console.log('access outer function variable: ' + value)
+
+                function innerMost() {
+                    console.log('access outer function variable value: ' + value)
+                    console.log('access outer function variable newVal: ' + newVal)
+                }
+                innerMost();
+            }
+            inner();
+        }
+        outerTest();
+
+        for (var index = 0; index < 5; index++) {
+            setTimeout(function () {
+                console.log(index); // 5, 5, 5, 5, 5
+            }, 1000);
+        }
+        console.log('outside of loop var: ' + index); // 5
+
+        for (let i = 0; i < 5; i++) {
+            setTimeout(function () {
+                console.log(i);
+            }, 1000);
+        }
+        // console.log('outside of loop let: ' + i);
+
+        // default example of the closure is setTimeout function, setInterval function.
+
+        for (var s = 0; s < 5; s++) {
+            function innerFunction(num) {
+                setTimeout(function () {
+                    console.log('values', num)
+                }, 1000)
+            }
+            innerFunction(s)
+        }
+
+
+    </script>
+</body>
+
+</html>

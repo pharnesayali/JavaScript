@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <!-- Global scope - variable declare at top of code or outside of function variable declared called global scope. global scope variable access anywhere in code. -->
+
+    <!-- block scope - variable declare inside function that called block scope. block scope variables are only access inside respective functions. -->
+
+    <script>
+        var age = 18;
+
+        (function () {
+            let name = 'Sayali'
+            console.log('name', name);
+
+            function innerFunction() {
+                let name;
+                console.log('name', name);
+            }
+
+            innerFunction()
+        })()
+
+        console.log('name', name)
+        console.log(age);
+
+    </script>
+</body>
+
+</html>

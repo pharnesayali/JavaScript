@@ -32,11 +32,57 @@
         // let hoistingConstValueAccess = 12;
 
         // 4.function stored in variable hoisting
-        console.log(funHoisting);
+        console.log(funHoisting); //undefined
+        // funHoisting(); //TypeError - funHoisting is not a function
 
         var funHoisting = function () {
             console.log('This is hoisting example - function stored in variable.')
         }
+
+        // 4. arrow function stored in variable hoisting
+
+        console.log(arrowHoistingFun) //undefined
+        // arrowHoistingFun(); //TypeError - arrowHoistingFun is not a function
+
+        var arrowHoistingFun = () => {
+            console.log('This is hoisting example - arrow function stored in variable.')
+        }
+
+        // Some example of hoisting.
+        // 1
+
+        var userName = "Sayali";
+        function b() {
+            setTimeout(print, 0);
+            console.log(userName); //undefined
+            var userName = "Anu";
+        }
+        console.log(userName); //Sayali
+        function print() {
+            console.log(userName) //sayali
+        }
+        b();
+
+        // 2
+        var num;
+        num = 10;
+        function printFun() {
+            var num;
+            if (num > 5) {
+                num = 10
+            }
+            console.log(num)
+        }
+
+        // printFun()
+
+            // 3
+            (function () {
+                var a = b = 10
+            })();
+        console.log(a, typeof a); //ReferenceError: a is not defined - global scope
+        console.log(b, typeof b); //10
+
 
 
     </script>

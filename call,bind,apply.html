@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Button Click</button>
+    <script>
+        // call - the current execution context passes to another function called call.
+        // The call() method calls a function with a given this value and arguments provided individually.
+        // call method is used to call a function with a given this value and arguments provided individually.
+        // calling another function for access value call is used.
+
+        function setUserName(userName) {   //after execution of this function, from the callstack all references are removed. that's why we use call with 'this' keyword. it holds the reference of the function.
+            this.userName = userName;
+        }
+
+        function createUserName(userName, email, password) {
+            setUserName.call(this, userName);
+            this.email = email;
+            this.password = password;
+        }
+
+        const valueSave = new createUserName('Sayali', 'pharnesayali7758@gmail.com', '123@sa');
+        console.log(valueSave);
+
+        // bind - the current execution context passes to another function called bind.
+        // In case of bind, it give all references to the next function.
+        // It forcefully binds the reference of the function to another function.
+        class angular {
+            constructor() {
+                this.name = 'Angular';
+                this.server = 'https://angular.io/';
+
+                document.querySelector('button').addEventListener('click', this.handleClick.bind(this));
+            }
+
+            handleClick() {
+                console.log('button clicked');
+                console.log(this);
+            }
+        }
+
+        this.angular = new angular(); // this is used to access the class object.
+
+        // apply - the current execution context passes to another function called apply.
+
+
+        const person1 = {
+            name: 'sayali',
+            age: 25,
+            getName: function (hometown, lastName) {
+                return this.name + ' ' + lastName + ' ' + hometown + ' ' + this.age;
+            }
+        }
+
+        const person2 = {
+            name: 'Anu',
+            age: 23,
+        }
+
+        // call
+        console.log(person1.getName.call(person2, 'Pune', 'Pharne')); // call method is used to call a function with a given this value and arguments provided individually.
+
+        // apply
+        console.log(person1.getName.apply(person2, ['sangli', 'Pharne'])); // apply method is used to call a function with a given this value and arguments provided as an array.
+
+        // bind
+        const getName = person1.getName.bind(person2, 'sangli', 'Pharne'); // bind method is used to call a function with a given this value and arguments provided as an array.
+        console.log(getName);
+        console.log(getName());
+    </script>
+</body>
+
+</html>
