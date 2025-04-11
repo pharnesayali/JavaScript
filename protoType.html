@@ -8,10 +8,12 @@
 </head>
 
 <body>
+    <!-- everything in java script considered as a object. -->
     <!-- A javaScript object is an entity having state and behavior (properties and methods) -->
     <!-- JS objects have a special property called prototype -->
     <!-- We can set prototype using _ _ proto _ _ -->
     <!-- *If object & prototype have same method, object’s method will be used. -->
+    <!-- according data type of the variable java script engine will attach or assign some functions and methods, property to that variable is called prototype -->
 
     <script>
         // simple way for create object
@@ -34,6 +36,7 @@
         }
 
         employee.__proto__ = details;   // reuse of the function. assign prototype to object using another function __proto__.
+        console.log('employee', employee)
 
 
         // if having a same method inside object and prototype, then it use method of the respective object.
@@ -51,8 +54,30 @@
             }
         }
 
-        rankedStud.__Proto__ = student;
+        rankedStud.__proto__ = student;
 
+        let rank = '1st';
+        console.log(rank.__proto__)
+        console.log(rank.__proto__.__proto__)
+
+        // example
+        let evenNumber = {
+            number: 26,
+            evenNumberFun: function () {
+                if (this.number % 2 === 0) {
+                    console.log(`given number ${this.number} and it's even number.`)
+                } else {
+                    console.log(`given number ${this.number} and it's odd number.`)
+                }
+            }
+        }
+
+        let num2 = {
+            number: 99,
+        }
+
+        num2.__proto__ = evenNumber;
+        console.log(num2.evenNumberFun());
 
     </script>
 </body>
