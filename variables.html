@@ -23,12 +23,64 @@
 
         console.log('name', name);
 
-        alert('Hi!', name);
-        let valueGet = prompt('Hi!');
-        console.log('valueGet', valueGet);
+        // alert('Hi!', name);
+        // let valueGet = prompt('Hi!');
+        // console.log('valueGet', valueGet);
 
         name = 'Sayali';
         console.log('name', name);
+
+        console.log('outside block', index); // undefined - for var, hoisting is possible.
+
+        for (var index = 0; index < 5; index++) {
+            console.log('inside block1', index);
+        }
+        console.log('inside block2', index);
+
+
+        // for (let i = 0; i < 5; i++) { //block scope
+        //     console.log('inside block1', index);
+        // }
+        // console.log('inside block2', i); // ReferenceError: index is not defined
+
+        function test() {
+            for (var index = 0; index < 5; index++) {
+                console.log('inside block1', index);
+            }
+            console.log('inside block2', index);
+        }
+        console.log('inside block3', index);
+
+        test()
+
+        function testing() {
+            for (let i = 0; i < 5; i++) {
+                console.log('inside block1', i);
+            }
+            // console.log('inside block2', i);
+        }
+        // console.log('inside block4', i);
+
+        testing()
+
+        const planet = 'Sun';
+        // planet = 'Earth';
+        // console.log('planet', planet); // TypeError: Assignment to constant variable.
+
+        const studData = {
+            name: 'Sayali',
+            zodiac: 'Gemini'
+        }
+
+        studData.name = 'Vishal'
+        console.log('studData', studData); // {name: 'Vishal', zodiac: 'Gemini'}
+
+        // studData = { birthday: '26-08-2000' } // TypeError: Assignment to constant variable.
+
+        const cityList = ['Pune', 'Sangli'];
+        // cityList.push('Kolhapur');
+        console.log([...cityList, 'kol'])
+        console.log('cityList', cityList); // ['Kolhapur', 'Pune', 'Sangli']
 
 
     </script>
