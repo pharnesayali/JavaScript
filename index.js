@@ -1,3 +1,7 @@
+'use strict';
+
+alert("I'm JS");
+
 function clickMe() {
   alert("button click!");
 }

@@ -10,6 +10,13 @@
 
 <body>
     <script>
+        // use strict mode
+        // 'use strict' is a directive in JavaScript that enables strict mode, which helps catch common coding errors and "unsafe" actions such as defining global variables unintentionally.
+        'use strict';
+        first_name = 'Sayali';
+        console.log('name', first_name); // ReferenceError: name is not defined
+
+
         // 'variable declaration, initialize, update, access'
         // var is function scope, declare, update and redeclare possible.
         // let is block scope, declare, update.redeclare not possible. after variable declare value is not initialize, then it not give error.
@@ -82,6 +89,11 @@
         console.log([...cityList, 'kol'])
         console.log('cityList', cityList); // ['Kolhapur', 'Pune', 'Sangli']
 
+        // for the multiple variable declaration, we can use 'let' and 'const' but not 'var'.
+        var Fname = 'Sayali',
+            Lname = 'Pharne';
+
+        console.log('user name', name + ' ' + Lname)
 
     </script>
 
